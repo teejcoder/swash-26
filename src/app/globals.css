@@ -1,26 +1,199 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-inter);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-neon-cyan: var(--neon-cyan);
+  --color-neon-magenta: var(--neon-magenta);
+  --color-neon-purple: var(--neon-purple);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  --radius: 0.5rem;
+  
+  /* Swash Dark Theme - High contrast with neon accents */
+  --background: 0 0% 0%;
+  --foreground: 0 0% 98%;
+  
+  --card: 0 0% 5%;
+  --card-foreground: 0 0% 98%;
+  
+  --popover: 0 0% 5%;
+  --popover-foreground: 0 0% 98%;
+  
+  --primary: 180 100% 50%; /* Cyan neon */
+  --primary-foreground: 0 0% 0%;
+  
+  --secondary: 300 100% 60%; /* Magenta neon */
+  --secondary-foreground: 0 0% 98%;
+  
+  --muted: 0 0% 10%;
+  --muted-foreground: 0 0% 60%;
+  
+  --accent: 270 100% 65%; /* Purple accent */
+  --accent-foreground: 0 0% 98%;
+  
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+  
+  --border: 0 0% 15%;
+  --input: 0 0% 15%;
+  --ring: 180 100% 50%;
+  
+  /* Custom Swash colors - Gritty dive bar palette */
+  --neon-cyan: 180 60% 45%; /* Dulled cyan - like old neon signs */
+  --neon-magenta: 320 55% 50%; /* Grungier magenta/hot pink */
+  --neon-purple: 270 45% 55%; /* Muted purple */
+  --dirty-orange: 30 75% 55%; /* Rust/spray paint orange */
+  --lime-green: 80 50% 50%; /* Acidic lime green */
+  --deep-black: 0 0% 0%;
+  --soft-white: 0 0% 98%;
+  --brick-red: 0 50% 40%; /* Dive bar brick */
+  --concrete-gray: 0 0% 25%; /* Urban concrete */
+}
+
+.dark {
+  --background: 0 0% 0%;
+  --foreground: 0 0% 98%;
+  --card: 0 0% 5%;
+  --card-foreground: 0 0% 98%;
+  --popover: 0 0% 5%;
+  --popover-foreground: 0 0% 98%;
+  --primary: 180 100% 50%;
+  --primary-foreground: 0 0% 0%;
+  --secondary: 300 100% 60%;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 0 0% 10%;
+  --muted-foreground: 0 0% 60%;
+  --accent: 270 100% 65%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 0 0% 15%;
+  --input: 0 0% 15%;
+  --ring: 180 100% 50%;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Custom utility classes for Swash - Gritty dive bar style */
+.text-neon-cyan {
+  color: hsl(var(--neon-cyan));
+}
+
+.text-neon-magenta {
+  color: hsl(var(--neon-magenta));
+}
+
+.text-neon-purple {
+  color: hsl(var(--neon-purple));
+}
+
+.text-dirty-orange {
+  color: hsl(var(--dirty-orange));
+}
+
+.text-lime-green {
+  color: hsl(var(--lime-green));
+}
+
+.bg-neon-cyan {
+  background-color: hsl(var(--neon-cyan));
+}
+
+.bg-neon-magenta {
+  background-color: hsl(var(--neon-magenta));
+}
+
+.bg-neon-purple {
+  background-color: hsl(var(--neon-purple));
+}
+
+.bg-dirty-orange {
+  background-color: hsl(var(--dirty-orange));
+}
+
+.bg-lime-green {
+  background-color: hsl(var(--lime-green));
+}
+
+.border-neon-cyan {
+  border-color: hsl(var(--neon-cyan));
+}
+
+.border-neon-magenta {
+  border-color: hsl(var(--neon-magenta));
+}
+
+.border-dirty-orange {
+  border-color: hsl(var(--dirty-orange));
+}
+
+.border-lime-green {
+  border-color: hsl(var(--lime-green));
+}
+
+/* Grittier glow effects - more subtle, like flickering signs */
+.glow-cyan {
+  box-shadow: 0 0 15px hsl(var(--neon-cyan) / 0.3), 0 0 30px hsl(var(--neon-cyan) / 0.15);
+}
+
+.glow-magenta {
+  box-shadow: 0 0 15px hsl(var(--neon-magenta) / 0.3), 0 0 30px hsl(var(--neon-magenta) / 0.15);
+}
+
+.glow-orange {
+  box-shadow: 0 0 15px hsl(var(--dirty-orange) / 0.4), 0 0 30px hsl(var(--dirty-orange) / 0.2);
+}
+
+/* Spray paint/graffiti text effect */
+.graffiti-shadow {
+  text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.8), 
+               -1px -1px 0px rgba(255, 255, 255, 0.1);
+}
+
+/* Rough border effect */
+.rough-border {
+  border-style: solid;
+  position: relative;
 }

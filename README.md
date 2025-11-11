@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎸 Swash Booking Agency
 
-## Getting Started
+A gritty, dive bar-inspired single-page website for Swash - Brisbane's live music booking agency run by local musicians.
 
-First, run the development server:
+## 🎨 Design
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Aesthetic**: Graffiti dive bar vibes with a raw, urban feel
+- **Colors**: Dulled neons (dirty orange, lime green, muted cyan/magenta)
+- **Style**: Angular borders, stencil typography, sticker-style elements
+- **Animations**: Framer Motion for smooth transitions and reveals
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 16 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS v4
+- **UI Components**: shadcn/ui
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Fonts**: Inter (Google Fonts)
+
+## 📦 Project Structure
+
+```
+src/
+├── app/
+│   ├── globals.css      # Custom color palette & styles
+│   ├── layout.tsx       # Root layout with fonts
+│   └── page.tsx         # Main page composition
+└── components/
+    ├── Header.tsx       # Floating navigation
+    ├── Hero.tsx         # Bold hero section
+    ├── SocialProof.tsx  # Stats & venues
+    ├── Features.tsx     # Services overview
+    ├── VenuesMarquee.tsx # Scrolling venue names
+    ├── Showcase.tsx     # Past shows gallery
+    ├── Testimonials.tsx # Client quotes
+    └── Contact.tsx      # Contact section
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎯 Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Responsive mobile-first design
+- Smooth scroll navigation
+- Dark theme optimized for high contrast
+- Grayscale-to-color image transitions
+- Rotated/skewed elements for graffiti effect
+- Custom color palette with dive bar aesthetic
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📝 Customisation
 
-## Learn More
+### Colors
+Edit custom colors in `src/app/globals.css`:
+```css
+--dirty-orange: 30 75% 55%;
+--lime-green: 80 50% 50%;
+--neon-cyan: 180 60% 45%;
+--neon-magenta: 320 55% 50%;
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Built for Swash** - Brisbane live music booking agency | Fortitude Valley, QLD
