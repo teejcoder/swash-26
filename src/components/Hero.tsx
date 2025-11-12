@@ -123,8 +123,8 @@ export default function Hero() {
             {[
               { value: "1k+", label: "Shows", color: "neon-cyan", rotation: "-2deg" },
               { value: "2k+", label: "Artists", color: "neon-magenta", rotation: "1deg" },
-              { value: "20+", label: "Venues", color: "neon-purple", rotation: "-1deg" },
-              { value: "5+", label: "Years", color: "neon-cyan", rotation: "2deg" },
+              { value: "20+", label: "Venues", color: "neon-cyan", rotation: "-1deg" },
+              { value: "5+", label: "Years", color: "neon-magenta", rotation: "2deg" },
             ].map((stat, index) => (
               <motion.div
                 key={index}

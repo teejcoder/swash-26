@@ -60,7 +60,7 @@ export default function SocialProof() {
           className="text-left md:text-center mb-10"
         >
           <p className="text-xs text-dirty-orange font-black uppercase tracking-widest mb-3">
-            // PROVEN TRACK RECORD
+            // TRACK RECORD
           </p>
           <h2 className="text-3xl sm:text-4xl font-black uppercase text-foreground graffiti-shadow">
             The Real Deal

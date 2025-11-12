@@ -181,7 +181,7 @@ export default function Contact() {
             className="text-center mt-12"
           >
             <p className="text-sm text-muted-foreground font-light">
-              Operating from the heart of Brisbane's live music scene since 2015 - 2020
+              Operating from the heart of Brisbane's live music scene 2015 - 2020.
             </p>
           </motion.div>
         </motion.div>
