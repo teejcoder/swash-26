@@ -3,26 +3,22 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Mail, Instagram, Facebook, Twitter, MapPin, ArrowRight } from "lucide-react";
+import { Mail, Instagram, Facebook, MapPin, ArrowRight } from "lucide-react";
+import Image from "next/image";
+import Logo from "../../public/logo.png"
 
 const socialLinks = [
   {
     name: "Instagram",
     icon: Instagram,
-    href: "https://instagram.com/swashbookings",
+    href: "/rip",
     color: "hover:text-neon-magenta",
   },
   {
     name: "Facebook",
     icon: Facebook,
-    href: "https://facebook.com/swashbookings",
+    href: "/rip",
     color: "hover:text-neon-cyan",
-  },
-  {
-    name: "Twitter",
-    icon: Twitter,
-    href: "https://twitter.com/swashbookings",
-    color: "hover:text-neon-purple",
   },
 ];
 
@@ -59,7 +55,7 @@ export default function Contact() {
         >
           {/* Header */}
           <div className="text-center mb-16">
-            <span className="inline-block px-4 py-2 bg-card/50 backdrop-blur-sm border border-neon-purple/30 rounded-full text-sm font-medium text-neon-purple mb-6">
+            <span className="inline-block px-4 py-2 bg-card/50 backdrop-blur-sm border border-neon-purple rounded-full text-sm font-medium text-lime-green mb-6">
               Get In Touch
             </span>
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tighter mb-6">
@@ -94,7 +90,7 @@ export default function Contact() {
                   
                   {/* Email */}
                   <a
-                    href="mailto:bookings@swash.com.au"
+                    href="/rip"
                     className="flex items-center gap-4 p-4 rounded-xl bg-background/50 hover:bg-background transition-all duration-300 group mb-4"
                   >
                     <div className="w-12 h-12 rounded-full bg-neon-cyan/10 flex items-center justify-center group-hover:bg-neon-cyan/20 transition-colors">
@@ -105,7 +101,7 @@ export default function Contact() {
                         Email
                       </div>
                       <div className="text-foreground font-medium group-hover:text-neon-cyan transition-colors">
-                        bookings@swash.com.au
+                        bookings@swash.tv
                       </div>
                     </div>
                   </a>
@@ -136,7 +132,6 @@ export default function Contact() {
                       <motion.a
                         key={index}
                         href={social.href}
-                        target="_blank"
                         rel="noopener noreferrer"
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.95 }}
@@ -164,7 +159,7 @@ export default function Contact() {
 
                 <div className="space-y-4">
                   <a
-                    href="mailto:bookings@swash.com.au"
+                    href="/rip"
                     className="flex items-center justify-center gap-2 w-full px-8 py-4 bg-gradient-to-r from-neon-cyan to-neon-magenta text-background font-semibold rounded-full hover:shadow-lg hover:shadow-neon-cyan/50 transition-all duration-300 group"
                   >
                     Send Us an Email
@@ -186,7 +181,7 @@ export default function Contact() {
             className="text-center mt-12"
           >
             <p className="text-sm text-muted-foreground font-light">
-              Operating from the heart of Brisbane's live music scene since 2016
+              Operating from the heart of Brisbane's live music scene since 2015 - 2020
             </p>
           </motion.div>
         </motion.div>
@@ -201,11 +196,10 @@ export default function Contact() {
       >
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="text-2xl font-black tracking-tighter">
-            <span className="text-neon-cyan">SW</span>
-            <span className="text-foreground">ASH</span>
+            <Image src={Logo} height={120} width={150} alt="Swash Logo"/>
           </div>
           <p className="text-sm text-muted-foreground font-light">
-            © 2024 Swash Bookings. All rights reserved.
+            © 2026 Swash Agency.
           </p>
         </div>
       </motion.footer>

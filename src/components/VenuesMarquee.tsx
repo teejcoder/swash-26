@@ -12,9 +12,12 @@ const venues = [
   { name: "THE TRIFFID", color: "neon-cyan" },
   { name: "TOMCAT", color: "neon-magenta" },
   { name: "CROWBAR", color: "dirty-orange" },
-  { name: "THE PRINCESS", color: "lime-green" },
+  { name: "RICS", color: "lime-green" },
   { name: "HEYA BAR", color: "neon-cyan" },
   { name: "LEFTY'S", color: "neon-magenta" },
+  { name: "EMPIRE HOTEL", color: "dirty-orange" },
+  { name: "BIRDEES", color: "neon-cyan" },
+  { name: "PRESS CLUB", color: "lime-green" },
 ];
 
 export default function VenuesMarquee() {
@@ -27,8 +30,8 @@ export default function VenuesMarquee() {
       <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(255,255,255,.05) 20px, rgba(255,255,255,.05) 40px)' }} />
       
       <div className="mb-4 text-center">
-        <div className="inline-block px-4 py-1 bg-black border-2 border-dirty-orange text-dirty-orange text-xs font-black uppercase tracking-widest">
-          ⚡ Venues ⚡
+        <div className="inline-block px-4 py-1 bg-black border-2 border-neon-cyan text-neon-cyan text-xs font-black uppercase tracking-widest">
+          ⚡ Venues Booked By Us & Friends⚡
         </div>
       </div>
 

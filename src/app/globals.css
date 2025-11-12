@@ -3,6 +3,12 @@
 
 @custom-variant dark (&:is(.dark *));
 
+::selection {
+  background-color: hsl(180, 100%, 50%);
+  color: hsl(0, 0%, 0%);
+  text-shadow: 0 0 8px hsl(180, 100%, 50%);
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -36,67 +42,67 @@
 :root {
   --radius: 0.5rem;
   
-  /* Swash Dark Theme - High contrast with neon accents */
-  --background: 0 0% 0%;
+  /* Swash Dark Theme - New Color Palette */
+  --background: 0 0% 5%; /* Jet Black */
   --foreground: 0 0% 98%;
   
-  --card: 0 0% 5%;
+  --card: 0 0% 5%; /* Jet Black */
   --card-foreground: 0 0% 98%;
   
-  --popover: 0 0% 5%;
+  --popover: 0 0% 5%; /* Jet Black */
   --popover-foreground: 0 0% 98%;
   
-  --primary: 180 100% 50%; /* Cyan neon */
-  --primary-foreground: 0 0% 0%;
+  --primary: 355 77% 57%; /* Crimson Neon */
+  --primary-foreground: 0 0% 98%;
   
-  --secondary: 300 100% 60%; /* Magenta neon */
+  --secondary: 191 100% 50%; /* Electric Cyan - More Neon */
   --secondary-foreground: 0 0% 98%;
   
-  --muted: 0 0% 10%;
+  --muted: 0 0% 17%; /* Steel Grey */
   --muted-foreground: 0 0% 60%;
   
-  --accent: 270 100% 65%; /* Purple accent */
+  --accent: 320 100% 65%; /* Hot Pink - More Neon */
   --accent-foreground: 0 0% 98%;
   
-  --destructive: 0 84% 60%;
+  --destructive: 355 77% 57%; /* Crimson Neon */
   --destructive-foreground: 0 0% 98%;
   
-  --border: 0 0% 15%;
-  --input: 0 0% 15%;
-  --ring: 180 100% 50%;
+  --border: 0 0% 17%; /* Steel Grey */
+  --input: 0 0% 17%; /* Steel Grey */
+  --ring: 76 100% 50%; /* Acid Green */
   
-  /* Custom Swash colors - Gritty dive bar palette */
-  --neon-cyan: 180 60% 45%; /* Dulled cyan - like old neon signs */
-  --neon-magenta: 320 55% 50%; /* Grungier magenta/hot pink */
-  --neon-purple: 270 45% 55%; /* Muted purple */
-  --dirty-orange: 30 75% 55%; /* Rust/spray paint orange */
-  --lime-green: 80 50% 50%; /* Acidic lime green */
-  --deep-black: 0 0% 0%;
+  /* Custom Swash colors */
+  --neon-cyan: 191 100% 50%; /* Electric Cyan - More Neon */
+  --neon-magenta: 320 100% 65%; /* Hot Pink - More Neon */
+  --neon-purple: 312 20% 45%; /* Dusty Mauve */
+  --dirty-orange: 45 100% 67%; /* Mustard Yellow */
+  --lime-green: 76 100% 50%; /* Acid Green */
+  --deep-black: 0 0% 5%; /* Jet Black */
   --soft-white: 0 0% 98%;
-  --brick-red: 0 50% 40%; /* Dive bar brick */
-  --concrete-gray: 0 0% 25%; /* Urban concrete */
+  --brick-red: 355 77% 57%; /* Crimson Neon */
+  --concrete-gray: 0 0% 17%; /* Steel Grey */
 }
 
 .dark {
-  --background: 0 0% 0%;
+  --background: 0 0% 5%;
   --foreground: 0 0% 98%;
   --card: 0 0% 5%;
   --card-foreground: 0 0% 98%;
   --popover: 0 0% 5%;
   --popover-foreground: 0 0% 98%;
-  --primary: 180 100% 50%;
-  --primary-foreground: 0 0% 0%;
-  --secondary: 300 100% 60%;
+  --primary: 355 77% 57%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 191 100% 50%;
   --secondary-foreground: 0 0% 98%;
-  --muted: 0 0% 10%;
+  --muted: 0 0% 17%;
   --muted-foreground: 0 0% 60%;
-  --accent: 270 100% 65%;
+  --accent: 320 100% 65%;
   --accent-foreground: 0 0% 98%;
-  --destructive: 0 84% 60%;
+  --destructive: 355 77% 57%;
   --destructive-foreground: 0 0% 98%;
-  --border: 0 0% 15%;
-  --input: 0 0% 15%;
-  --ring: 180 100% 50%;
+  --border: 0 0% 17%;
+  --input: 0 0% 17%;
+  --ring: 76 100% 50%;
 }
 
 @layer base {

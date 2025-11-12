@@ -8,14 +8,14 @@ import { Star, Users, Zap, TrendingUp } from "lucide-react";
 const stats = [
   {
     icon: Zap,
-    value: "500+",
+    value: "1000+",
     label: "Shows",
     color: "text-dirty-orange",
     rotation: "-3deg",
   },
   {
     icon: Users,
-    value: "100+",
+    value: "2000+",
     label: "Artists",
     color: "text-lime-green",
     rotation: "2deg",
@@ -29,7 +29,7 @@ const stats = [
   },
   {
     icon: TrendingUp,
-    value: "8 Yrs",
+    value: "5 Yrs",
     label: "Experience",
     color: "text-neon-cyan",
     rotation: "3deg",
@@ -43,8 +43,14 @@ export default function SocialProof() {
   return (
     <section className="py-12 sm:py-16 bg-black border-y-4 border-dirty-orange/50 relative overflow-hidden">
       {/* Graffiti-style background texture */}
-      <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,.03) 10px, rgba(255,255,255,.03) 20px)' }} />
-      
+      <div
+        className="absolute inset-0 opacity-5"
+        style={{
+          backgroundImage:
+            "repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,.03) 10px, rgba(255,255,255,.03) 20px)",
+        }}
+      />
+
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           ref={ref}
@@ -70,16 +76,18 @@ export default function SocialProof() {
               transition={{ duration: 0.4, delay: index * 0.1 }}
               whileHover={{ scale: 1.05, rotate: 0 }}
               className="flex flex-col items-center text-center p-5 bg-black border-4 border-current transform transition-all"
-              style={{ 
+              style={{
                 transform: `rotate(${stat.rotation})`,
-                boxShadow: '4px 4px 0px 0px rgba(0, 0, 0, 0.8)',
+                boxShadow: "4px 4px 0px 0px rgba(0, 0, 0, 0.8)",
               }}
             >
               <stat.icon
                 className={`w-8 h-8 mb-3 ${stat.color}`}
                 strokeWidth={3}
               />
-              <div className={`text-4xl sm:text-5xl font-black mb-1 ${stat.color} uppercase`}>
+              <div
+                className={`text-4xl sm:text-5xl font-black mb-1 ${stat.color} uppercase`}
+              >
                 {stat.value}
               </div>
               <div className="text-xs text-foreground/60 font-bold uppercase tracking-wider">
@@ -101,12 +109,13 @@ export default function SocialProof() {
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
             {[
-              { name: "The Brightside", color: "dirty-orange" },
-              { name: "The Zoo", color: "lime-green" },
-              { name: "Black Bear Lodge", color: "neon-cyan" },
-              { name: "The Foundry", color: "neon-magenta" },
-              { name: "Woolly Mammoth", color: "dirty-orange" },
-              { name: "Netherworld", color: "lime-green" },
+              { name: "Tomcat", color: "dirty-orange" },
+              { name: "The Empire Hotel", color: "lime-green" },
+              { name: "Birdees", color: "neon-cyan" },
+              { name: "Heya Bar (RIP)", color: "neon-magenta" },
+              { name: "Rics Bar", color: "dirty-orange" },
+              { name: "Greaser Bar", color: "lime-green" },
+              { name: "Lefty's", color: "neon-cyan" },
             ].map((venue, index) => (
               <motion.div
                 key={index}

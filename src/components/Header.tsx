@@ -3,7 +3,9 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
-
+import Image from "next/image";
+import logo from "../../public/swash-bg-removed.png"
+ 
 const navLinks = [
   { name: "Home", href: "#hero" },
   { name: "What We Do", href: "#features" },

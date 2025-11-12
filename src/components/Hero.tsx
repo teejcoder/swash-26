@@ -2,6 +2,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { ReceiptIcon } from "lucide-react";
 
 
 export default function Hero() {
@@ -84,10 +85,10 @@ export default function Hero() {
             className="mb-10"
           >
             <p className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground/90 max-w-4xl mx-auto leading-tight uppercase tracking-tight">
-              Fortitude Valley / Live Shows / Artist Management
+              Live Shows | Touring | Management
             </p>
             <p className="text-base sm:text-lg text-foreground/60 max-w-2xl mx-auto mt-4 font-medium">
-              Run by musicians who live the scene.
+              Run by musicians who live the scene. 
             </p>
           </motion.div>
 
@@ -120,10 +121,10 @@ export default function Hero() {
             className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto"
           >
             {[
-              { value: "500+", label: "Shows", color: "neon-cyan", rotation: "-2deg" },
-              { value: "100+", label: "Artists", color: "neon-magenta", rotation: "1deg" },
+              { value: "1k+", label: "Shows", color: "neon-cyan", rotation: "-2deg" },
+              { value: "2k+", label: "Artists", color: "neon-magenta", rotation: "1deg" },
               { value: "20+", label: "Venues", color: "neon-purple", rotation: "-1deg" },
-              { value: "8+", label: "Years", color: "neon-cyan", rotation: "2deg" },
+              { value: "5+", label: "Years", color: "neon-cyan", rotation: "2deg" },
             ].map((stat, index) => (
               <motion.div
                 key={index}

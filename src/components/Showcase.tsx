@@ -3,20 +3,19 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { ExternalLink } from "lucide-react";
 import Image from "next/image";
 
 const projects = [
   {
     title: "Valley Indie Night",
     category: "Weekly Showcase",
-    image: "https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "https://images.pexels.com/photos/2601203/pexels-photo-2601203.jpeg",
     description: "Emerging local talent every Thursday",
   },
   {
     title: "Interstate Tour",
     category: "National Circuit",
-    image: "https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "https://images.pexels.com/photos/9271233/pexels-photo-9271233.jpeg",
     description: "5-city tour featuring Brisbane's finest",
   },
   {
@@ -28,19 +27,19 @@ const projects = [
   {
     title: "Acoustic Sessions",
     category: "Intimate Series",
-    image: "https://images.pexels.com/photos/1047442/pexels-photo-1047442.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "https://images.pexels.com/photos/33731251/pexels-photo-33731251.jpeg",
     description: "Stripped-back performances in unique venues",
   },
   {
     title: "Electronic Nights",
     category: "Club Series",
-    image: "https://images.pexels.com/photos/1540406/pexels-photo-1540406.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "https://images.pexels.com/photos/3536274/pexels-photo-3536274.jpeg",
     description: "Underground sounds and boundary-pushing beats",
   },
   {
     title: "Rock Showcase",
     category: "Monthly Event",
-    image: "https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "https://images.pexels.com/photos/7502187/pexels-photo-7502187.jpeg",
     description: "High-energy live performances every month",
   },
 ];

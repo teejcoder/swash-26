@@ -3,14 +3,14 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Music, Users, Plane, Lightbulb, Radio } from "lucide-react";
+import { Music, Users, Plane, Lightbulb, Radio, User, Check } from "lucide-react";
 
 const features = [
   {
     icon: Music,
     title: "Live Bookings",
     description:
-      "Fortitude Valley's grittiest venues. We pack rooms with the acts people actually want to see. No filler, all killer.",
+      "Brisbane's BEST venues. We pack rooms with the acts people actually want to see. No filler, all killer.",
     iconColor: "text-dirty-orange",
     borderColor: "border-dirty-orange",
     rotation: "-2deg",
@@ -19,7 +19,7 @@ const features = [
     icon: Users,
     title: "Artist Management",
     description:
-      "Career guidance from people who've lived it. We help artists find their sound and build something real.",
+      "Career guidance from people who've lived it. We help artists find their sound and build their audience.",
     iconColor: "text-lime-green",
     borderColor: "border-lime-green",
     rotation: "1deg",
@@ -28,7 +28,7 @@ const features = [
     icon: Plane,
     title: "Touring",
     description:
-      "Take it interstate. We handle the logistics so you can focus on the show. Routes, venues, all sorted.",
+      "Take it interstate. We handle the logistics so you can focus on the show. Routes, venues, bands all sorted.",
     iconColor: "text-neon-cyan",
     borderColor: "border-neon-cyan",
     rotation: "-1deg",
@@ -49,6 +49,15 @@ const features = [
       "Quality sound gear without the corporate markup. Reliable equipment, fair rates, done deal.",
     iconColor: "text-dirty-orange",
     borderColor: "border-dirty-orange",
+    rotation: "-1deg",
+  },
+    {
+    icon: Check,
+    title: "Event Staffing",
+    description:
+      "Need staff? Trained & reliable crew for merch booths, sound, lighting, and everything in between.",
+    iconColor: "text-lime-green",
+    borderColor: "border-lime-green",
     rotation: "-1deg",
   },
 ];
@@ -78,7 +87,7 @@ export default function Features() {
             <span className="text-foreground">Do</span>
           </h2>
           <p className="text-base sm:text-lg text-foreground/60 font-medium max-w-2xl">
-            Real booking agency. Run by musicians. No bullshit.
+            A booking agency. Run by musicians. No bulls***.
           </p>
         </motion.div>
 
