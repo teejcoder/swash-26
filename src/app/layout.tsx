@@ -18,6 +18,20 @@ export const metadata: Metadata = {
     title: "Swash | Brisbane Live Music Booking Agency",
     description: "Brisbane's creative booking agency for live music, artist management, and touring.",
     type: "website",
+    images: [
+      {
+        url: '/og-image.jpg', // or '/og-image.png'
+        width: 1200,
+        height: 630,
+        alt: 'Swash - Brisbane Live Music Booking Agency',
+      }
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Swash | Brisbane Live Music Booking Agency",
+    description: "Brisbane's creative booking agency for live music, artist management, and touring.",
+    images: ['/og-image.jpg'], // or '/og-image.png'
   },
 };
 
